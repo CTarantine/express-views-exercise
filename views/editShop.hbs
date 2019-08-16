@@ -1,0 +1,17 @@
+<form method="POST" action="/shops/{{index}}?_method=PUT">
+    <label for="name">name</label>
+    <input type="text" name="name" value="{{singleShop.name}}"/>
+
+    <label for="employees">number of employees</label>
+    <input type="number" name="employees" value="{{singleShop.employees}}"/>
+
+    <label>Currently Open</label>
+    <input type="checkbox"  name="currentlyOpen" value="true"
+    {{#if singleShop.currentlyOpen}} checked {{/if}}/>
+
+    <input type="submit" value="Update Shop" />
+</form>
+
+<form method="POST" action="/shops/{{index}}?_method=DELETE">
+    <input type="submit" value="Delete Shop" />
+</form>
