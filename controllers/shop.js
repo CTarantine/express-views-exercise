@@ -25,17 +25,17 @@ shopRouter.get('/:index', function(req,res){
 
 shopRouter.post('/', (req,res) => {
   shopsApi.addShop(req.body);
-  res.send(200);
+  res.redirect('/allShops');
 })
 
 shopRouter.put('/:index', function(req,res){
   shopsApi.updateShop(req.params.index, req.body);
-  res.send(200);
+  res.redirect('/allShops');
 })
 
 shopRouter.delete('/:index', function(req,res){
   shopsApi.deleteShop(req.params.index)
-  res.send(200);
+  res.redirect('/allShops');
 })
 
 
